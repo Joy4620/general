@@ -1,11 +1,11 @@
-M = 3
-N = 4
+M = int(input())
+N = int(input())
 success = ['no']
 
-table = [[3, 10,  8, 14],
-         [1, 11, 12, 12],
-         [6,  2,  3,  9]]
+table = []
 
+for i in range(M):
+    table.append(list(map(int, input().split())))
 
 def check(row, col):
     if row >= M or col >= N or table[row][col] == 0:
