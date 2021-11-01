@@ -1,3 +1,4 @@
+print('bps')
 Matrix = [
     ['w', 'w', 'w', 'w', 'w', 'w'],
     ['w', 'w', '.', 'w', 'w', 'w'],
@@ -12,8 +13,6 @@ Matrix = [
 
 current = 0
 
-# bps
-print('bps')
 stack = [(4, 1)]
 while stack:
     x, y = stack.pop(0)
@@ -26,8 +25,21 @@ for i in Matrix:
     print(i)
 
 
-# dps
 print('dps')
+Matrix = [
+    ['w', 'w', 'w', 'w', 'w', 'w'],
+    ['w', 'w', '.', 'w', 'w', 'w'],
+    ['w', '.', '.', 'w', 'w', 'w'],
+    ['w', '.', '.', '.', 'w', 'w'],
+    ['w', 'S', 'w', 'A', '.', 'w'],
+    ['w', '.', 'w', 'w', 'w', 'w'],
+    ['w', '.', 'w', 'w', 'w', 'w'],
+    ['w', 'w', 'w', '.', '.', 'w'],
+    ['w', 'w', 'w', 'w', 'w', 'w'],
+]
+
+current = 0
+
 stack = [(4, 1)]
 while stack:
     x, y = stack.pop()
