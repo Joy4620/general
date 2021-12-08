@@ -1,30 +1,3 @@
-''' Input
-    AA AB
-    AB BB
-    B AA
-    4 AB AAAB
-
-    Output
-    2 1 BB
-    3 1 AAB
-    3 3 AAAA
-    1 3 AAAB
-
-    Alternative Output:
-    2 1 BB
-    3 2 BAA
-    1 2 BAB
-    3 1 AAAB
-
-    input details
-    - first 3 lines are sub. rules
-    - 4th line: s - # of steps, 
-    i - initial sequence, f - finished sequence
-    output details
-    - r - sub rule #
-    - p - position of starting index
-    - w - sequence that results'''
-
 rulekey = []
 rulevalue = []
 
@@ -84,9 +57,3 @@ while Stack:
         a = replace(i, str(P.dstr))
         for j in a:
             Stack.append(Variation(j[0], j[1], j[2], P))
-
-
-# print(P.step, 'p.step')
-# print(P.record, 'p.record')
-# print(visited, 'visited')
-
