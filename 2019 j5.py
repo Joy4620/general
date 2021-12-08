@@ -28,7 +28,7 @@ class Variation():
 
 
 Stack = [Variation(i)]
-visited=[]
+visited=[set() for _ in range(int(s))]
 
 
 def replace(rulenumber, string):
@@ -44,7 +44,7 @@ def replace(rulenumber, string):
 
 while Stack:
     P = Stack.pop()
-    if P.dstr in visited:
+    if P.dstr in visited[P.step-1]:
         continue
     if P.step == int(s):
         if P.dstr == str(f):
@@ -52,7 +52,7 @@ while Stack:
                 print(f'{i[0]+1} {i[1]+1} {i[2]}')
             break
         continue
-    visited.append(P.dstr)
+    visited[P.step].add(P.dstr)
     for i in range(3):
         a = replace(i, str(P.dstr))
         for j in a:
